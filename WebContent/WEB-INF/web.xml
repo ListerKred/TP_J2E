@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>TP_J2E</display-name>
+  <servlet>
+    <servlet-name>ServletHome</servlet-name>
+    <servlet-class>com.tp.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <!-- servlet>
+    <servlet-name>ServletLogin</servlet-name>
+    <servlet-class>com.top.servlet.LoginServlet</servlet-class>
+  </servlet-->
+  <servlet>
+    <servlet-name>ServletUserView</servlet-name>
+    <servlet-class>com.top.servlet.UserViewServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletUserCreate</servlet-name>
+    <servlet-class>com.top.servlet.UserCreateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletUserEdit</servlet-name>
+    <servlet-class>com.top.servlet.UserEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>JspLogin</servlet-name>
+    <servlet-class>com.top.servlet.LoginServlet</servlet-class>
+    <jsp-file>/META-INF/jsps/JspLogin.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>JspHome</servlet-name>
+    <jsp-file>/META-INF/jsps/JspHome.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>JspUserView</servlet-name>
+    <jsp-file>/META-INF/jsps/JspUserView.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>JspUserCreate</servlet-name>
+    <jsp-file>/META-INF/jsps/JspUserCreate.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>JspUserEdit</servlet-name>
+    <jsp-file>/META-INF/jsps/JspUserEdit.jsp</jsp-file>
+  </servlet>
+</web-app>
