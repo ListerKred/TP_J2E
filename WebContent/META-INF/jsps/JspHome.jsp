@@ -33,7 +33,9 @@
           </nav>
     </div>
 <% Map<Integer, User> mapUser = new HashMap<Integer, User>();
-mapUser.putAll((Map<Integer, User>) app.getAttribute("user")); %>
+if(application.getAttribute("user") != null) {
+    mapUser.putAll((Map<Integer, User>) app.getAttribute("user"));
+} %>
 <div class="tab-container" style="margin:20px;">
     <table  id="Tab" class="display" style="width:90%; margin:auto;">
         <thead>

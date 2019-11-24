@@ -34,7 +34,6 @@ public class HomeServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext app = this.getServletContext();
-        app.getAttribute("user");
 
         Map<Integer, User> mapUser = new HashMap<Integer, User>();
 
@@ -47,7 +46,8 @@ public class HomeServlet extends HttpServlet {
         user.setEmail("Emailbidon@gmail.com");
         mapUser.put(1, user);
 
-        request.setAttribute("user", mapUser);
+        app.setAttribute("user", mapUser);
+
         RequestDispatcher rd;
         rd = this.getServletContext().getNamedDispatcher("JspHome");
         rd.forward(request, response);
