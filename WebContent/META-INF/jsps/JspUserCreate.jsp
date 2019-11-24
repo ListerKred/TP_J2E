@@ -15,7 +15,6 @@
              <input type="submit" alt="log out" value=<%= session.getAttribute("username")%> style="float:right;">
           </nav>
     </div>
-    <form action="/TP_J2E/site/user/" method="POST">
     username
     <input type="text" name="username"/><br>
     firstname
@@ -30,8 +29,10 @@
     <input type="text" name="email"/><br>
     password
     <input type="password" name="password"/><br>
-    <input type="submit" value="Create User">
+    <form action="/TP_J2E/url/user/" method="POST">
+    <input type="submit" value="Create User" >
     </form>
+
 
 
 
