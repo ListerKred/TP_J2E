@@ -22,6 +22,7 @@ import com.tp.entities.User;
 public class HomeServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
+    private Map<Integer, User> mapUsers = new HashMap<Integer, User>();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,18 +36,17 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext app = this.getServletContext();
 
-        Map<Integer, User> mapUser = new HashMap<Integer, User>();
+        User users = new User();
+        users.setUserName("didiber");
+        users.setFirstName("Didier");
+        users.setLastName("Bernard");
+        users.setAddress("43 rue des perdus");
+        users.setPhone("06.53.45.46.69");
+        users.setEmail("Emailbidon@gmail.com");
+        mapUsers.put(1, users);
+        app.setAttribute("user", mapUsers);
+        request.setAttribute("user", mapUsers);
 
-        User user = new User();
-        user.setUserName("didiber");
-        user.setFirstName("Didier");
-        user.setLastName("Bernard");
-        user.setAddress("43 rue des perdus");
-        user.setPhone("06.53.45.46.69");
-        user.setEmail("Emailbidon@gmail.com");
-        mapUser.put(1, user);
-
-        app.setAttribute("user", mapUser);
 
         RequestDispatcher rd;
         rd = this.getServletContext().getNamedDispatcher("JspHome");

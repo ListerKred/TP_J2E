@@ -2,7 +2,7 @@ package com.tp.entities;
 
 public class User {
 
-    public int id = 0;
+    public Integer id = 0;
 
     private String userName;
 
@@ -20,11 +20,11 @@ public class User {
 
     public static int sequence = 0;
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -82,6 +82,10 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String displayName() {
+        return String.format("%s %s", this.firstName, this.lastName);
     }
 
 //    public User(long id,String userName, String firstName, String lastName, String address, String phone,String email,

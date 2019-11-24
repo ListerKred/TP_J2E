@@ -5,10 +5,10 @@
     <servlet-name>ServletHome</servlet-name>
     <servlet-class>com.tp.servlet.HomeServlet</servlet-class>
   </servlet>
-  <!-- servlet>
+    <servlet>
     <servlet-name>ServletLogin</servlet-name>
     <servlet-class>com.top.servlet.LoginServlet</servlet-class>
-  </servlet-->
+  </servlet>
   <servlet>
     <servlet-name>ServletUserView</servlet-name>
     <servlet-class>com.top.servlet.UserViewServlet</servlet-class>
@@ -23,7 +23,6 @@
   </servlet>
   <servlet>
     <servlet-name>JspLogin</servlet-name>
-    <servlet-class>com.top.servlet.LoginServlet</servlet-class>
     <jsp-file>/META-INF/jsps/JspLogin.jsp</jsp-file>
   </servlet>
   <servlet>

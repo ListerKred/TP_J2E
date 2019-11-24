@@ -26,23 +26,20 @@
 
 </head>
 <body>
+<%int idCounter = 0; %>
     <div class="nav-container">
           <nav class="navbar" style="background-color: #F5F5DC !important">
              <img class=img-logo src= "img/logo.png" alt="" style="width: 115px !important">
                 <input type="submit" alt="log out" value=<%= session.getAttribute("username")%> style="float:right;">
           </nav>
     </div>
-<% Map<Integer, User> mapUser = new HashMap<Integer, User>();
-if(application.getAttribute("user") != null) {
-    mapUser.putAll((Map<Integer, User>) app.getAttribute("user"));
-} %>
 <div class="tab-container" style="margin:20px;">
     <table  id="Tab" class="display" style="width:90%; margin:auto;">
         <thead>
             <tr>
                 <th>Username</th>
                 <th>First Name</th>
-                <th>photo</th>
+                <th>Photo</th>
                 <th>Last Name</th>
                 <th>Address</th>
                 <th>Phone</th>
@@ -50,6 +47,7 @@ if(application.getAttribute("user") != null) {
             </tr>
         </thead>
         <tbody>
+        <% Map<Integer, User> mapUser = (HashMap<Integer, User>) request.getAttribute("user");%>
 <% for(Map.Entry<Integer, User> u : mapUser.entrySet()) {%>
             <tr>
                 <td><%= u.getValue().getUserName() %></td>

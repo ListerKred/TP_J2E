@@ -29,6 +29,7 @@ public class UserCreateServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         RequestDispatcher rd;
         rd = this.getServletContext().getNamedDispatcher("JspUserCreate");
         rd.forward(request, response);
